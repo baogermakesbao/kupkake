@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Kupkake — Agents where you trade",
+  "version": "1.0.0",
+  "description": "On PancakeSwap, Venus, GMGN, debot.ai, four.meme and more: meet the right BNB Chain agent for the page you're on. Max 2 recommendations, explainable rules, never touches your wallet.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Kupkake",
+    "default_icon": { "48": "icon48.png" }
+  },
+  "host_permissions": [
+    "https://kupkake.fun/*",
+    "https://www.kupkake.fun/*",
+    "http://localhost:9800/*"
+  ],
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://pancakeswap.finance/*",
+        "https://*.pancakeswap.finance/*",
+        "https://venus.io/*",
+        "https://*.venus.io/*",
+        "https://lista.org/*",
+        "https://*.lista.org/*",
+        "https://debot.ai/*",
+        "https://*.debot.ai/*",
+        "https://gmgn.ai/*",
+        "https://*.gmgn.ai/*",
+        "https://four.meme/*",
+        "https://*.four.meme/*",
+        "https://dexscreener.com/*",
+        "https://*.dexscreener.com/*"
+      ],
+      "js": ["config.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
