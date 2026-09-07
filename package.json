@@ -1,0 +1,30 @@
+{
+  "name": "kupkake",
+  "version": "1.0.0",
+  "description": "Kupkake — agents where you trade. Chrome extension + rule-based recommendation engine for the BNB Chain agent marketplace at kupkake.fun.",
+  "homepage": "https://kupkake.fun",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baogermakesbao/kupkake.git"
+  },
+  "author": "Baoger <leebin605@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "demo": "tsx engine/demo.ts"
+  },
+  "keywords": [
+    "bnb-chain",
+    "bsc",
+    "defi",
+    "agents",
+    "erc-8004",
+    "erc-8183",
+    "chrome-extension",
+    "recommendation-engine"
+  ],
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
